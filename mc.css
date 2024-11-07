@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -19,12 +20,13 @@ header {
     margin: 10px 0;
 }
 
+/* Container Styles */
 .container {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping of boxes */
-    justify-content: space-between; /* Distribute boxes evenly */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dynamic grid for better layout */
+    gap: 20px; /* Spacing between boxes */
     width: 90%;
-    max-width: 1000px; /* Increased max-width for larger screen */
+    max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
     background: white;
@@ -32,26 +34,25 @@ header {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Box Styles */
 .box-container {
-    flex: 1 1 calc(30% - 20px); /* Set each box to take up 30% of the container width, minus margins */
-    margin: 10px; /* Equal margin for spacing */
     text-align: center;
-    text-decoration: none; /* Remove underline from the links */
+    text-decoration: none;
 }
 
 .box {
-    background-color: #3498db;
+    background-color: #4CAF50;
     color: white;
     padding: 20px;
     border-radius: 5px;
-    display: inline-block; /* Ensure the box dimensions are respected */
     transition: background-color 0.3s;
 }
 
 .box:hover {
-    background-color: #2980b9;
+    background-color: #cf80ff;
 }
 
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 10px 0;
